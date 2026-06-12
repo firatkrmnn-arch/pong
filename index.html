@@ -154,7 +154,7 @@ function buildFigure(img){
 const queue=[];
 function safeBuild(im){ try{ queue.push(buildFigure(im)); }catch(e){} }
 function tryOne(i, extI){
-  const exts=['jpg','jpeg'];
+  const exts=['jpg','jpeg','JPG','JPEG'];
   if(extI>=exts.length) return;
   const im=new Image();
   im.onload=()=>{ safeBuild(im); };
